@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 <body>
 	<h1>Formulario de ingreso de datos</h1>
 	<!-- Esto se puede cambiar a POST. -->
-	<form action="Ejercicio04.jsp" method="GET"> <!-- Se establece el formulario mediante html y utilizando el método GET, se envia a la ruta especificada con el atributo action. -->
+	<form action="Ejercicio04.jsp" method="GET"> <!-- Se establece el formulario mediante html y utilizando el mÃ©todo GET, se envia a la ruta especificada con el atributo action. -->
 		<label for="precioVenta">Precio de la venta sin IVA</label> 
 		<input type="text" name="precioVenta"> <!-- El usuario ingresa datos mediante html. -->
 
@@ -18,7 +18,7 @@
 		</p>
 	</form>
 
-	<%-- Procesado de datos utilizando Java (La etiqueta <% %> se utiliza para procesar datos y utilizar métodos como GET y POST). --%>
+	<%-- Procesado de datos utilizando Java (La etiqueta <% %> se utiliza para procesar datos y utilizar mÃ©todos como GET y POST). --%>
 	<%	
 	try {
 		double precioVenta = Double.parseDouble(request.getParameter("precioVenta"));

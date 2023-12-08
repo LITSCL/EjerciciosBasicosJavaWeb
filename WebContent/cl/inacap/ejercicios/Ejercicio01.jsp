@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 <body>
 	<h1>Formulario de ingreso de datos</h1>
 	<!-- Esto se puede cambiar a POST. -->
-	<form method="GET" action="Ejercicio01.jsp"> <!-- Se establece el formulario mediante html y utilizando el método GET, se envia a la ruta especificada con el atributo action. -->
+	<form method="GET" action="Ejercicio01.jsp"> <!-- Se establece el formulario mediante html y utilizando el mÃ©todo GET, se envia a la ruta especificada con el atributo action. -->
 		<label for="largo">Largo</label> 
 		<input type="text" name="largo"/><br/> <!-- El usuario ingresa datos mediante html. -->
 		
@@ -21,11 +21,11 @@
 		</p>
 	</form>
 
-	<%-- Procesado de datos utilizando Java (La etiqueta <% %> se utiliza para procesar datos y utilizar métodos como GET y POST). --%>
+	<%-- Procesado de datos utilizando Java (La etiqueta <% %> se utiliza para procesar datos y utilizar mÃ©todos como GET y POST). --%>
 	<% 
-	try { //Es necesario capturar la excepción ya que cuando se carga la página por primera vez el formulario no tiene datos.
-		int largo = Integer.parseInt(request.getParameter("largo")); //Se crea una variable, se trae el dato de tipo String utilizando el método estatico getParameter, se refunde a int utilizando el método estatico parseInt y se almacena en la variable de tipo int.
-		int ancho = Integer.parseInt(request.getParameter("ancho")); //Se crea una variable, se trae el dato de tipo String utilizando el método estatico getParameter, se refunde a int utilizando el método estatico parseInt y se almacena en la variable de tipo int.
+	try { //Es necesario capturar la excepciÃ³n ya que cuando se carga la pÃ¡gina por primera vez el formulario no tiene datos.
+		int largo = Integer.parseInt(request.getParameter("largo")); //Se crea una variable, se trae el dato de tipo String utilizando el mÃ©todo estatico getParameter, se refunde a int utilizando el mÃ©todo estatico parseInt y se almacena en la variable de tipo int.
+		int ancho = Integer.parseInt(request.getParameter("ancho")); //Se crea una variable, se trae el dato de tipo String utilizando el mÃ©todo estatico getParameter, se refunde a int utilizando el mÃ©todo estatico parseInt y se almacena en la variable de tipo int.
 			
 		out.println("<hr>" + " El area del rectangulo es: " + largo * ancho + " y su perimetro es: " + (largo + largo + ancho + ancho));	
 	} catch(Exception ex) {
